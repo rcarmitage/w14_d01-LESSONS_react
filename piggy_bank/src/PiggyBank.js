@@ -8,11 +8,22 @@ class PiggyBank extends Component {
       total: 0
     };
     this.deposit = this.deposit.bind(this);
+    this.withdraw = this.withdraw.bind(this);
   }
 
   deposit() {
-    this.setState(prevState =>{
-      return {total: prevState.total + 5};
+    this.setState(prevState => {
+      return {total: prevState.total + this.props.depositAmount};
+    });
+  }
+
+  withdraw() {
+    this.setState(prevState => {
+      let newAmount = prevState.total - this.props.depositAmount;
+      if(newAmount < 0){
+        newAmount = 0;
+      }
+      return {total: newAmount};
     });
   }
 
@@ -22,6 +33,7 @@ class PiggyBank extends Component {
         <h1>{this.props.title}</h1>
         <p>Total: £{this.state.total}</p>
         <button onClick={ this.deposit }>Deposit</button>
+        <button onClick={ this.withdraw }>Withdraw</button>
       </Fragment>
     );
   }
