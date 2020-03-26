@@ -6,7 +6,14 @@ class PiggyBank extends Component {
     super(props);
     this.state = {
       total: 0
-    }
+    };
+    this.deposit = this.deposit.bind(this);
+  }
+
+  deposit() {
+    this.setState(prevState =>{
+      return {total: prevState.total + 5};
+    });
   }
 
   render() {
@@ -14,8 +21,9 @@ class PiggyBank extends Component {
       <Fragment>
         <h1>{this.props.title}</h1>
         <p>Total: £{this.state.total}</p>
+        <button onClick={ this.deposit }>Deposit</button>
       </Fragment>
-    )
+    );
   }
 }
 
