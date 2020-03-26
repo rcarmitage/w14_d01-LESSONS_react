@@ -9,6 +9,7 @@ class CommentForm extends Component {
     };
     this.handleAuthorChange = this.handleAuthorChange.bind(this);
     this.handleTextChange = this.handleTextChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(event) {
@@ -18,7 +19,8 @@ class CommentForm extends Component {
     if (!text || !author) {
       return
     }
-    // TODO: Update the list of comments
+    this.props.onCommentSubmit({author: author, text: text});
+    this.setState({author: '', text: ''});
   }
 
   handleAuthorChange(event) {
@@ -31,7 +33,7 @@ class CommentForm extends Component {
   
   render() {
     return (
-      <form className="comment-form">
+      <form className="comment-form" onSubmit={this.handleSubmit}>
         <input
           type="text"
           placeholder="Your name"

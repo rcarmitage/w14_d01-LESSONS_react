@@ -17,14 +17,20 @@ class CommentBox extends Component {
         }
       ]
     };
+    this.handleCommentSubmit = this.handleCommentSubmit.bind(this);
   }
   
+handleCommentSubmit(submittedComment) {
+  submittedComment.id = Date.now();
+  const updatedComments = [...this.state.data, submittedComment];
+  this.setState({data: updatedComments});
+}
+
   render() {
     return (
       <div className="comment-box">
-        <h2>Add a Comment</h2>
-        <CommentForm />
         <h2>Comments</h2>
+        <CommentForm onCommentSubmit={this.handleCommentSubmit} />
         <CommentList data={this.state.data} />
       </div>
     );
