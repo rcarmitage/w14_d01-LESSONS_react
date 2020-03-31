@@ -1,8 +1,9 @@
 import React from 'react';
+import FilmBox from './containers/FilmBox';
 
 function App() {
   return (
-    <h1>Hello, Films</h1>
+    <FilmBox />
   );
 }
 
