@@ -1,4 +1,5 @@
 import React from 'react';
+import Film from './Film';
 
 const FilmList = ({data}) => {
   const FilmNodes = data.map(film => {
@@ -10,8 +11,10 @@ const FilmList = ({data}) => {
   });
 
   return (
-    <div>
+    <div className="film-list">
       {FilmNodes}
     </div>
   )
 }
+
+export default FilmList;
