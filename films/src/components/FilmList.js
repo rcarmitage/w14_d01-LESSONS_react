@@ -9,5 +9,9 @@ const FilmList = ({data}) => {
     );
   });
 
-  return 
+  return (
+    <div>
+      {FilmNodes}
+    </div>
+  )
 }
