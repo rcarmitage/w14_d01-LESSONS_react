@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FilmList from '../components/FilmList';
 
 class FilmBox extends Component {
   constructor(props) {
@@ -14,15 +15,16 @@ class FilmBox extends Component {
           title: "Film 02"
         }
       ]
-    }
+    };
   }
 
   render() {
     return (
       <div>
         <h2>Films</h2>
+        <FilmList data={this.state.data} />
       </div>
-    )
+    );
   }
 }
 
