@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FilmList from '../components/FilmList';
+import FilmLink from '../component/FilmLink';
 
 class FilmBox extends Component {
   constructor(props) {
