@@ -16,7 +16,7 @@ const FilmList = ({data}) => {
         {FilmNodes}
       </ul>
     </div>
-  )
+  );
 }
 
 export default FilmList;
