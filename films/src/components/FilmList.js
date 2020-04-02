@@ -11,9 +11,11 @@ const FilmList = ({data}) => {
   });
 
   return (
-    <ul className="film-list">
-      {FilmNodes}
-    </ul>
+    <div>
+      <ul className="film-list">
+        {FilmNodes}
+      </ul>
+    </div>
   )
 }
 
