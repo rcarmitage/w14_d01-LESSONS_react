@@ -8,11 +8,28 @@ class FilmBox extends Component {
       data: [
         {
           id: 1,
-          title: "Film 01"
+          name: "Western Stars",
+          url: "https://www.imdb.com/title/tt10687158/?ref_=rlm"
         },
         {
           id: 2,
-          title: "Film 02"
+          name: "Doctor Sleep",
+          url: "https://www.imdb.com/title/tt5606664/?ref_=rlm"
+        },
+        {
+          id: 3,
+          name: "Sorry We Missed You",
+          url: "https://www.imdb.com/title/tt8359816/?ref_=rlm"
+        },
+        {
+          id: 4,
+          name: "After The Wedding", 
+          url: "https://www.imdb.com/title/tt7985692/?ref_=rlm"
+        },
+        {
+          id: 5,
+          name: "Brittany Runs a Marathon",
+          url: "https://www.imdb.com/title/tt7671064/?ref_=rlm"
         }
       ]
     };
