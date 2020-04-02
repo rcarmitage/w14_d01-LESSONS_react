@@ -40,6 +40,7 @@ class FilmBox extends Component {
       <div>
         <h2>Films</h2>
         <FilmList data={this.state.data} />
+        <FilmLink />
       </div>
     );
   }
