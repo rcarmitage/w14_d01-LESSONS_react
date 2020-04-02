@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Film = ({title}) => (
-  <div className="film">
-    <h4>{title}</h4>
-  </div>
+const Film = ({title, url}) => (
+  <li className="film">
+    <a href={url}>{title}</a>
+  </li>
 );
 
 export default Film;
